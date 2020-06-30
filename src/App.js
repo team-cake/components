@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './components/header.js';
+import header from './components/header.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function app() {
+    return (
+        
+          <div className="row">
+        {all_header.map(header => (
+            <header
+              link={header.link}
+              icon={header.icon}
+              />
+              )
+            }
+</div>
 
-export default App;
+
+const all_header = [
+  {
+    link: "https://learntocodetogether.nl/assets/icon.svg",
+    icon: 90,
+  },
+  {
+    link: "Charizard",
+    icon: 90,
+  },
+  {
+    link: "Charizard",
+    icon: 90,
+  },
+];
